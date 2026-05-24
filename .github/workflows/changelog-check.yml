@@ -1,12 +1,18 @@
 name: Check Changelog
-on:
+'on':
   pull_request:
-    types: [assigned, opened, synchronize, reopened, labeled, unlabeled]
+    types:
+    - assigned
+    - opened
+    - synchronize
+    - reopened
+    - labeled
+    - unlabeled
     branches:
-      - main
+    - main
 jobs:
   Check-Changelog:
     name: Check Changelog Action
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: tarides/changelog-check-action@v1
+    - uses: tarides/changelog-check-action@v1
